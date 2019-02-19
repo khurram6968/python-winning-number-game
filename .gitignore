@@ -1,9 +1,20 @@
+#create a guessing number game:
 import random
-GuessNumber=int(input("enter your number between 0 to 5:"))
-WinningNumber=(random.randint(0,5))#genrating random numbers use random.randint()
-if WinningNumber==GuessNumber:
-    print("Winner")
-else:
-    print("Loser")
-    pass
-print(f"WinningNumber:{WinningNumber}")
+WinningNumber=random.randint(1,100)
+guess=1
+GameOver=False
+number=int(input("Enter a number between 1 to 100: "))
+while not GameOver:
+    if number==WinningNumber:
+        print(f"you win, and you guessed this number in {guess} times")
+        GameOver=True
+        print(f"WinningNumber is {WinningNumber}")
+    else:
+        if number>WinningNumber:
+            print("too high")
+            guess += 1
+            number=int(input("guess again: "))
+        else:
+            print("too low")
+            guess += 1
+            number=int(input("guess again: "))
