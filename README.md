@@ -1,3 +1,3 @@
-# python-winning-number-game
-python winning number game
+# python
+Create a guessing number game.
 
